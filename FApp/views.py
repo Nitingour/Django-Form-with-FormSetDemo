@@ -13,7 +13,10 @@ class ProfileList(ListView):
     def get_success_url(self):
             return reverse('profile-list')
 
-
+class FamilyMemberList(ListView):
+    model = FamilyMember
+    def get_success_url(self):
+            return reverse('profilefm-list')
 
 class ProfileFamilyMemberCreate(CreateView):
     model = Profile

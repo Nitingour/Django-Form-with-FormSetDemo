@@ -1,0 +1,21 @@
+{% for fm in familymember_list %}
+{{fm.profile.first_name}}
+{{fm.profile.last_name}}
+{{fm.profile.created_date}}
+{{fm.name}}
+{{fm.relationship}}
+{% endfor %}
+
+<!--   NOT WORKING CODE
+{% for fm in familymember_list %}
+{{fm.name}}
+{{fm.relationship}}
+{% for pro in fm.profile_set.all %}
+        <ul>
+        <li>{{pro.first_name}}
+        <li>{{pro.last_name}}
+        <li>{{pro.created_date}}
+        </ul>
+    <br>
+       {% endfor %}
+{% endfor %} -->

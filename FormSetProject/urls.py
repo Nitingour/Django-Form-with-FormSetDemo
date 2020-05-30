@@ -19,9 +19,8 @@ from FApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.ProfileList.as_view(),name='profile-list'),
+    path('fmlist/',views.FamilyMemberList.as_view(),name='profilefm-list'),
     path('createfm/',views.ProfileFamilyMemberCreate.as_view()),
     path('create/',views.ProfileCreate.as_view()),
-
-
 
 ]
